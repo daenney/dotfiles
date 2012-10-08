@@ -1,0 +1,13 @@
+[user]
+	name = Daniele Sluijters
+	email = github@daenney.net
+[core]
+	editor = mvim -f
+	pager = most -s
+[branch]
+	autosetuprebase = always
+[color]
+    ui = auto
+	pager = true
+[alias]
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative

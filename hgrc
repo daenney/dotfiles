@@ -1,0 +1,15 @@
+[ui]
+username=Daniele Sluijters <daenney@daenney.net>
+editor=vim
+ignore=/Users/daenney/.hgignore_global
+
+[web]
+cacerts = ~/.ssh/dummycert.pem
+
+[pager]
+pager = most
+
+[extensions]
+hgext.convert = 
+hgext.pager = 
+hggit = 
