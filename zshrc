@@ -18,4 +18,3 @@ plugins=(brew bundler cap django gem git github mercurial osx pip python rake rb
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-eval "$(rbenv init -)"
