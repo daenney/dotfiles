@@ -1,19 +1,19 @@
 [user]
-	name = Daniele Sluijters
-	email = github@daenney.net
+    name = Daniele Sluijters
+    email = github@daenney.net
 [core]
-	editor = mvim -f
-	pager = most -s
+    editor = mvim -f
+    pager = most -s
 [branch]
-	autosetuprebase = always
+    autosetuprebase = always
 [color]
     ui = auto
-	pager = true
+    pager = true
 [alias]
-	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 [push]
-	default = upstream
+    default = upstream
 [branch "master"]
-	rebase = true
+    rebase = true
 [rebase]
-	stat = true
+    stat = true
