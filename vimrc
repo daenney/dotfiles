@@ -307,8 +307,18 @@ let g:Powerline_mode_S = 'SL'
 let g:Powerline_mode_cs = 'SC'
 
 " Python-mode
+let g:pymode_run = 1
+let g:pymode_run_key = 'R'
+let g:pymode_doc = 1
+let g:pymode_doc_key = 'K'
 let g:pymode_rope = 0
 let g:pymode_lint = 0
+let g:pymode_folding = 0
+let g:pymode_motion = 1
+let g:pymode_utils_whitespaces = 1
+let g:pymode_indent = 1
+let g:pymode_syntax = 1
+let g:pymode_syntax_all = 1
 
 ""
 " Filetype changes
