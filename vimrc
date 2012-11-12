@@ -44,17 +44,22 @@ map <down> <nop>
 map <left> <nop>
 map <right> <nop>
 
-" Mac hack so we can use Meta
+" Mac hack so we can use Meta to move around
 let os=substitute(system('uname'), '\n', '', '')
-if os == 'Darwin' || os == 'Mac'
+if has("gui_macvim")
     set macmeta
-endif
 
-" Colemak hjkl hack
-nnoremap <M-h> <Left>|
-nnoremap <M-n> <Down>|
-nnoremap <M-e> <Up>|
-nnoremap <M-i> <Right>|
+    " Colemak hjkl hack
+    nnoremap <M-h> <Left>|
+    nnoremap <M-n> <Down>|
+    nnoremap <M-e> <Up>|
+    nnoremap <M-i> <Right>|
+    vnoremap <M-h> <Left>|
+    vnoremap <M-n> <Down>|
+    vnoremap <M-e> <Up>|
+    vnoremap <M-i> <Right>|
+
+endif
 
 " Vundle
 filetype off
