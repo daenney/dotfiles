@@ -282,7 +282,7 @@ if has("gui_macvim")
     " Done stealing from Janus
 endif
 
-"" 
+""
 " Plugin configuration
 ""
 
