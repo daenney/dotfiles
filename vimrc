@@ -307,8 +307,5 @@ au BufNewFile,BufRead *.rb set ts=2 sw=2 tw=2
 au BufNewFile,BufRead *.html set ts=2 sw=2 tw=2
 " Makrdown
 au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} setf markdown
-
-
-
-
-
+" Make files
+au FileType make setlocal noexpandtab
