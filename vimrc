@@ -323,7 +323,8 @@ let g:pymode_syntax_all = 1
 ""
 " Filetype changes
 ""
-
+" relaod vimrc on write
+au! BufWritePost $MYVIMRC source $MYVIMRC
 " tabs are fine in XML/HTML
 au filetype html,xml set listchars-=tab:>.
 " Jinja2
