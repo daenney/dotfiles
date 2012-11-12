@@ -44,12 +44,18 @@ set listchars=tab:\ \             " a tab should display as "  ", trailing white
 set listchars+=trail:.            " show trailing spaces as dots
 set listchars+=extends:>          " The character to show in the last column when wrap is
 " off and the line continues beyond the right of the screen
-set listchars+=precedes:< 
+set listchars+=precedes:<
 
 ""
 " Wildmode
 ""
 set wildmode=list:longest,full
+
+""
+" Completion
+""
+set completeopt=longest,menuone
+
 
 ""
 " Vundle
@@ -108,7 +114,7 @@ colorscheme hybrid
 
 
 ""
-" General GUI options 
+" General GUI options
 ""
 if has("gui_running")
     set guioptions=egmrt
