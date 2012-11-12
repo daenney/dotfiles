@@ -149,6 +149,17 @@ nmap <silent> <leader>fc <ESC>/\v^[<=>]{7}( .*\|$)<CR>
 nmap <leader>hs :set hlsearch! hlsearch?<CR>
 " Ctrl+n+Ctrl+n to toggle linenumbers
 nmap <C-N><C-N> :set invnumber<CR>
+" Smarter regexes
+cnoremap s/ s/\v
+cnoremap %s/ %s/\v
+" Indent/de-dent in visual without losing selection
+vnoremap < <gv
+vnoremap > >gv
+" Trailing whitespace madness
+au ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+au InsertLeave * match ExtraWhitespace /\s\+$/
+map <Leader>x :%s/\s\+$//
+
 " use hjkl
 map <up> <nop>
 map <down> <nop>
