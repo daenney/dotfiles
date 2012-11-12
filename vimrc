@@ -110,8 +110,6 @@ Bundle 'uggedal/jinja-vim'
 " Turn all the fancy back on
 filetype plugin indent on
 syntax on
-colorscheme hybrid
-
 
 ""
 " General GUI options
@@ -317,3 +315,8 @@ au BufNewFile,BufRead *.html set ts=2 sw=2 tw=2
 au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} setf markdown
 " Make files
 au FileType make setlocal noexpandtab
+
+""
+" Colorscheme
+""
+colorscheme hybrid
