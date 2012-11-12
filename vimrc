@@ -61,15 +61,28 @@ if has("gui_macvim")
 
 endif
 
+""
 " Vundle
+""
 filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
+" Utility bundles
 Bundle 'gmarik/vundle'
 Bundle 'L9'
-Bundle 'wincent/Command-T'
+Bundle 'tomtom/tlib_vim'
+Bundle 'MarcWeber/vim-addon-mw-utils'
+" Functionality
+Bundle 'mileszs/ack.vim'
+Bundle 'kien/ctrlp.vim'
+Bundle 'ervandew/supertab'
+Bundle 'jeetsukumaran/vim-buffergator'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'ZoomWin'
+Bundle 'chrisbra/NrrwRgn'
 Bundle 'tpope/vim-eunuch'
 Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-surround'
 Bundle 'larssmit/vim-getafe'
 Bundle 'w0ng/vim-hybrid'
 Bundle 'sjl/badwolf'
