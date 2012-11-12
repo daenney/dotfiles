@@ -13,6 +13,8 @@ set nrformats=
 set ttyfast
 set title
 set mouse=a
+set clipboard=unnamed
+set autoread
 ""
 " Search
 ""
