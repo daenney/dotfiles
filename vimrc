@@ -96,6 +96,7 @@ Bundle 'apeschel/vim-syntax-apache'
 Bundle 'daenney/vim-puppet'
 Bundle 'tpope/vim-git'
 Bundle 'Markdown'
+Bundle 'othree/html5.vim'
 
 " Turn all the fancy back on
 filetype plugin indent on
@@ -138,6 +139,10 @@ let g:pymode_lint = 0
 " Jinja2
 au BufNewFile,BufRead *.jinja set filetype=jinja
 
+" Ruby
+au BufNewFile,BufRead *.rb set ts=2 sw=2 tw=2
+" HTML
+au BufNewFile,BufRead *.html set ts=2 sw=2 tw=2
 
 " Ctrl+n+Ctrl+n to toggle linenumbers
 nmap <C-N><C-N> :set invnumber<CR>
