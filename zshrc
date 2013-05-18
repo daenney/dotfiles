@@ -13,8 +13,18 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(brew bundler cap django gem git github mercurial osx pip python rake rbenv sublime virtualenvwrapper)
+plugins=(brew capistrano django git github mercurial osx pip python rbenv virtualenvwrapper zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+
+function diff {
+    colordiff -u "$@" | most
+}
+
+alias gitlog='git whatchanged'
+fpath=(/usr/local/share/zsh-completions $fpath)
+# The rbenv plugin sets RBENV_ROOT to /usr/local/opt/rbenv but
+# the Homebrew formula says /usr/local/var/rbenv
+export RBENV_ROOT=/usr/local/var/rbenv
