@@ -2,7 +2,6 @@
     name = Daniele Sluijters
     email = github@daenney.net
 [core]
-    editor = mvim -f
     pager = most -s
 [branch]
     autosetuprebase = always
@@ -11,9 +10,29 @@
     pager = true
 [alias]
     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    ci = commit
+    a = add
+    e = pull --rebase
+    st = status
+    df = diff
+    new = !sh -c 'git log $1@{1}..$1@{0} "$@"'
+    switch = !legit switch \"$@\"
+    branches = !legit branches
+    sprout = !legit sprout \"$@\"
+    unpublish = !legit unpublish \"$@\"
+    harvest = !legit harvest \"$@\"
+    sync = !legit sync \"$@\"
+    publish = !legit publish \"$@\"
+    graft = !legit graft \"$@\"
 [push]
     default = upstream
 [branch "master"]
     rebase = true
 [rebase]
     stat = true
+[merge]
+    stat = true
+[pull]
+    stat = true
+[help]
+    autocorrect = 1
