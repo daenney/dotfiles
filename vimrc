@@ -5,7 +5,8 @@
 filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
-
+set shell=/usr/local/bin/zsh
+set path=/usr/local/var/rbenv/shims:/usr/local/share/npm/bin:/usr/local/share/python:/usr/local/share/python3:/usr/local/sbin:/usr/local/bin:/opt/X11/bin:/usr/bin:/bin:/usr/sbin:/sbin
 " Plugin manager
 Bundle 'gmarik/vundle'
 " Fuzzy finder and buffer manager
@@ -15,11 +16,13 @@ Bundle 'scrooloose/syntastic'
 " Project explorer
 Bundle 'scrooloose/nerdtree'
 " Useful statusbar
-Bundle 'Lokaltog/vim-powerline'
+Bundle 'bling/vim-airline'
 " Python autocompletion
 Bundle 'davidhalter/jedi-vim'
 " Git wrapper
 Bundle 'tpope/vim-fugitive'
+" Numbers
+Bundle "myusuf3/numbers.vim"
 " iTerm2 / tmux integration
 Bundle 'sjl/vitality.vim'
 " Align text
@@ -38,7 +41,10 @@ Bundle 'bigbrozer/vim-nagios'
 Bundle 'othree/html5.vim'
 " Jinja
 Bundle 'Glench/Vim-Jinja2-Syntax'
-
+" Coffeescript
+Bundle 'kchmck/vim-coffee-script'
+" rst
+Bundle 'Rykka/riv.vim'
 filetype plugin indent on
 
 ""
@@ -129,20 +135,28 @@ nmap \M :set noexpandtab tabstop=8 softtabstop=4 shiftwidth=4<CR>
 nmap \m :set expandtab tabstop=2 shiftwidth=2 softtabstop=2<CR>
 nmap \w :setlocal wrap!<CR>:setlocal wrap?<CR>
 
-" Powerline
+" Statusline
 set laststatus=2 " Always display the statusline in all windows
 set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
-let g:Powerline_symbols = 'fancy'
-let g:Powerline_stl_path_style = 'short'
-let g:Powerline_mode_n = 'N '
-let g:Powerline_mode_i = 'I '
-let g:Powerline_mode_r = 'R '
-let g:Powerline_mode_v = 'V '
-let g:Powerline_mode_V = 'VL'
-let g:Powerline_mode_cv = 'VC'
-let g:Powerline_mode_s = 'S '
-let g:Powerline_mode_S = 'SL'
-let g:Powerline_mode_cs = 'SC'
+
+" Airline
+let g:airline_enable_branch=1
+let g:airline_enable_syntastic=1
+let g:airline_powerline_fonts=0
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+let g:airline_linecolumn_prefix = '␊ '
+let g:airline_linecolumn_prefix = '␤ '
+let g:airline_linecolumn_prefix = '¶ '
+let g:airline_branch_prefix = '⎇ '
+let g:airline_paste_symbol = 'ρ'
+let g:airline_paste_symbol = 'Þ'
+let g:airline_paste_symbol = '∥'
+
+" Riv
+let g:riv_fold_auto_update=0
 
 ""
 " Filetype settings
@@ -180,3 +194,4 @@ if ! has('gui_running')
 endif
 
 colorscheme hybrid
+let g:syntastic_puppet_lint_disable = 0
