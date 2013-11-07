@@ -11,5 +11,5 @@ Icon
 .Trashes
 
 # Shell
-fish_history
-fishd.*
+config/fish/fish_history
+config/fish/fishd.*
