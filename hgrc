@@ -1,5 +1,5 @@
 [ui]
-username=Daniele Sluijters <daenney@daenney.net>
+username=Daniele Sluijters <bitbucket@daenney.net>
 editor=vim
 ignore=/Users/daenney/.hgignore_global
 
@@ -12,4 +12,3 @@ pager = most
 [extensions]
 hgext.convert = 
 hgext.pager = 
-hggit = 
