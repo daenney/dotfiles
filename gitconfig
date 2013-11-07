@@ -35,4 +35,6 @@
 [pull]
     stat = true
 [help]
-    autocorrect = 1
+    autocorrect = -1
+[gpg]
+    program = gpg2
