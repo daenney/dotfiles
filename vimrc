@@ -2,49 +2,53 @@
 " Plugins first
 ""
 
-filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-set shell=/usr/local/bin/zsh
-set path=/usr/local/var/rbenv/shims:/usr/local/share/npm/bin:/usr/local/share/python:/usr/local/share/python3:/usr/local/sbin:/usr/local/bin:/opt/X11/bin:/usr/bin:/bin:/usr/sbin:/sbin
+set rtp+=~/.vim/bundle/neobundle.vim
+set shell=/bin/bash
+set path=/usr/local/var/rbenv/shims:/usr/local/var/rbenv/bin:/usr/local/opt/pyenv/shims:/usr/local/opt/pyenv/bin:/usr/local/sbin:/usr/local/bin:/bin:/usr/sbin:/sbin:/usr/bin:/opt/X11/bin:/usr/local/MacGPG2/bin
+
 " Plugin manager
-Bundle 'gmarik/vundle'
+call neobundle#rc(expand('~/.vim/bundle/'))
+NeoBundleFetch 'Shougo/neobundle.vim'
+NeoBundle 'Shougo/vimproc'
+
 " Fuzzy finder and buffer manager
-Bundle 'kien/ctrlp.vim'
+NeoBundle 'kien/ctrlp.vim'
 " Syntax checkers
-Bundle 'scrooloose/syntastic'
+NeoBundle 'scrooloose/syntastic'
 " Project explorer
-Bundle 'scrooloose/nerdtree'
+NeoBundle 'scrooloose/nerdtree'
 " Useful statusbar
-Bundle 'bling/vim-airline'
+NeoBundle 'bling/vim-airline'
 " Python autocompletion
-Bundle 'davidhalter/jedi-vim'
+NeoBundle 'davidhalter/jedi-vim'
 " Git wrapper
-Bundle 'tpope/vim-fugitive'
+NeoBundle 'tpope/vim-fugitive'
 " Numbers
-Bundle "myusuf3/numbers.vim"
+NeoBundle "myusuf3/numbers.vim"
 " iTerm2 / tmux integration
-Bundle 'sjl/vitality.vim'
+NeoBundle 'sjl/vitality.vim'
 " Align text
-Bundle 'godlygeek/tabular'
+NeoBundle 'godlygeek/tabular'
 " Code snippet support
-Bundle 'guns/ultisnips'
+NeoBundle 'guns/ultisnips'
 " Hybrid colorscheme
-Bundle 'w0ng/vim-hybrid'
+NeoBundle 'w0ng/vim-hybrid'
 " Puppet
-Bundle 'daenney/vim-puppet'
+NeoBundle 'daenney/vim-puppet'
 " Markdown
-Bundle 'tpope/vim-markdown'
+NeoBundle 'tpope/vim-markdown'
 " Nagios
-Bundle 'bigbrozer/vim-nagios'
+NeoBundle 'bigbrozer/vim-nagios'
 " HTML5
-Bundle 'othree/html5.vim'
+NeoBundle 'othree/html5.vim'
 " Jinja
-Bundle 'Glench/Vim-Jinja2-Syntax'
+NeoBundle 'Glench/Vim-Jinja2-Syntax'
 " Coffeescript
-Bundle 'kchmck/vim-coffee-script'
+NeoBundle 'kchmck/vim-coffee-script'
 " rst
-Bundle 'Rykka/riv.vim'
+NeoBundle 'Rykka/riv.vim'
+" fish shell
+NeoBundle 'dag/vim-fish'
 filetype plugin indent on
 
 ""
